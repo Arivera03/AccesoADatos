@@ -11,20 +11,31 @@ public class Exercici3 {
 
 
 		if (!docOrigen.exists()) {
-			System.out.println("COMPROVA QUE LA CARPETA DOCUMENTS ESTA CREADA I LA RUTA ES CORRECTA");
+			System.out.println("COMPRUEBA QUE LA CARPETA DOCUMENTOS ESTA CREADA Y LA RUTA SEA CORRECTA");
 		}
 // Reanomenem la carpeta Documents
 
 		docOrigen.renameTo(docDesti);
+
+
 		
 // Creem dos objectes de tipus File on assignem la ruta d'origen i la ruta dest�. // (PER A LA CARPETA FOTOGRAFIAS) i canviem el nom
-		
 
+		File fotOrigen = new File("Documentos/Fotografias");
+		File fotDesti = new File("Documentos/Fotos");
+
+		if (!fotOrigen.exists()) {
+			System.out.println("COMPRUEBA QUE LA CARPETA FOTOGRAFIAS ESTA CREADA Y LA RUTA SEA CORRECTA");
+		}
 		
 // Creem dos objectes de tipus File on assignem la ruta d'origen i la ruta dest�. // (PER A LA CARPETA LIBROS) i canviem el nom
-		
 
-		
+		File libOrigen = new File("Documentos/Libros");
+		File libDesti = new File("Documentos/Lecturas");
+
+		if (!libOrigen.exists()) {
+			System.out.println("COMPRUEBA QUE LA CARPETA LIBROS ESTA CREADA Y LA RUTA SEA CORRECTA");
+		}
 
 		/* **********************************************************
          *  Llevem les extensions en FOTOS (REANOMENTANT ELS ARXIUS)
