@@ -54,11 +54,9 @@ public class Ej1main {
             FileInputStream archivoleer = new FileInputStream("asignaturas.dat");
             ObjectInputStream in = new ObjectInputStream(archivoleer);
             int sumanotas = 0;
-            System.out.println("llega");
             for (int i = 0; i < 6; i++) {
                 objeto = (Asignatura) in.readObject();
                 sumanotas += objeto.nota;
-                System.out.println(sumanotas);
             }
             in.close();
             archivoleer.close();
