@@ -10,6 +10,8 @@ import java.util.Scanner;
 public class Ejercicio7 {
     public static void main(String[] args) {
         HashMap<String, Integer> mapa = new HashMap<>();
+        int RepPalabra = 0;
+        String palabramasrep = null;
         try{
             FileReader arch = new FileReader("src/7.txt");
             BufferedReader br = new BufferedReader(arch);
@@ -18,13 +20,20 @@ public class Ejercicio7 {
             int numlineas = 0;
             while ((linea = br.readLine()) != null) {
                 String[] palabras = linea.split(" ");
-                for (int i = 0; i < palabras.length; i++) {
+                for (String palabra : palabras) {
+                    mapa.put(palabra, mapa.getOrDefault(palabra, 0) + 1);
                     numpalabras++;
+                    if (mapa.get(palabra) > RepPalabra) {
+                        RepPalabra = mapa.get(palabra);
+                        palabramasrep = palabra;
+                    }
                 }
                 numlineas++;
             }
             System.out.println(numpalabras);
             System.out.println(numlineas);
+            System.out.println("La palabra más repetida ha sido: " + palabramasrep);
+            
 
             br.close();
 
