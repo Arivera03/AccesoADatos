@@ -45,8 +45,8 @@ public class Ej1main {
             ObjectOutputStream out = new ObjectOutputStream(archivoescribir);
             for (Asignatura asignatura : asignaturas) {
                 out.writeObject(asignatura);
-                System.out.println("Se ha serializao");
             }
+            System.out.println("Se ha serializao");
             archivoescribir.close();
             out.close();
 
@@ -58,6 +58,7 @@ public class Ej1main {
                 objeto = (Asignatura) in.readObject();
                 sumanotas += objeto.nota;
             }
+            System.out.println("Se ha deserializao");
             in.close();
             archivoleer.close();
             int media = sumanotas / 6;
