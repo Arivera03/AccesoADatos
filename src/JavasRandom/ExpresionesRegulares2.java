@@ -7,7 +7,7 @@ public class ExpresionesRegulares2 {
     public static void main(String[] args) {
         String frase = "Eres un huevon";
         String insulto = "huevon";
-        String reemplazo = "Buen hombre";
+        String reemplazo = "buen hombre";
 
         Pattern patron = Pattern.compile(insulto);
         Matcher matcher = patron.matcher(frase);
