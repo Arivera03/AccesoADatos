@@ -1,4 +1,5 @@
-import java.io.FileNotFoundException;
+package JavasRandom;
+
 import java.io.RandomAccessFile;
 
 public class FicherosAleatorios {
@@ -11,7 +12,7 @@ public class FicherosAleatorios {
             archivoaleatorio.writeDouble(doubleprimero);
             archivoaleatorio.seek(archivoaleatorio.length()-1);
             archivoaleatorio.writeDouble(doublesegundo);
-            for (int i = 0; i <= archivoaleatorio.length() - 1; i++) {
+            for (int i = 0; i < archivoaleatorio.length() - 1; i++) {
                  archivoaleatorio.seek(i);
                  System.out.println(archivoaleatorio.readDouble() + " ");
             }
